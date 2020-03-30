@@ -53,6 +53,10 @@
              <div id="centered2" class="centered"><h3 style="color:white;"><span class="glyphicon glyphicon-search"></span>&nbsp&nbsp<strong>Hear what people are talking about</strong></h3></div>
              <div id="centered3" class="centered"><h3 style="color:white;"><span class="glyphicon glyphicon-search"></span>&nbsp&nbsp<strong>Join the conversation</strong></h3></div>
         </div>
+        <div class="col-sm-6" style="left:8%;">
+        <img src="images/logo.webp" alt="Instagram photo" class="img-rounded" title="Instagram" width="200px" height="100px">
+
+        </div>
         
     </div>
     
