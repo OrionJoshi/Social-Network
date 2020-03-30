@@ -38,13 +38,34 @@
         left:30%
         transform:translate(-50%, -50%);
     }
+    #signup{
+        width:60%;
+        border-radius:30px;
+    }
+    #login{
+        width:60%;
+        background-color:#fff;
+        border:1px solid #1da1f2;
+        color:#1da1f2;
+        border-radius:30px;
+    }
+    #login:hover{
+        width:60%;
+        background-color:#fff;
+        color:#1da1f2;
+        border:1px solid #1da1f2;
+        border-radius:30px;
+    }
+    .well{
+        background-color:#187FAB;
+    }
 </style>
 <body>
     
     <div class="row">
         <div class="col-sm-12">
             <div class="well">
-                <center><h1>Social Network</h1></center>
+                <center><h1 style="color:black;">Social Network</h1></center>
             </div>
         </div>
         <div class="col-sm-6" style="left:0.5%";>
@@ -55,7 +76,22 @@
         </div>
         <div class="col-sm-6" style="left:8%;">
         <img src="images/logo.webp" alt="Instagram photo" class="img-rounded" title="Instagram" width="200px" height="100px">
-
+        <h2><strong>Lets Join To See The World</strong></h2><br><br>
+        <h4><strong>Join Social Network Today</strong></h4>
+        <form action="" method="post">
+            <button id="signup" class="btn btn-info btn-lg" name="signup">Sign Up</button><br><br>
+            <?php
+                if(isset($_POST['signup'])){
+                    echo "<script>window.open('signup.php','_self')</script>";
+                }
+            ?>
+            <button id="login" class="btn btn-info btn-lg" name="login">Login</button><br><br>
+            <?php
+                if(isset($_POST['login'])){
+                    echo "<script>window.open('login.php','_self')</script>";
+                }
+            ?>
+        </form>
         </div>
         
     </div>
