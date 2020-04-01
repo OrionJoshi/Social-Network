@@ -42,7 +42,7 @@
 
     <div class="row">
         <div class="col-sm-12">
-            <div class="well">
+            <div class="well well-sm">
                 <center><h1 style="color:black;">Social Network</h1></center>
             </div>
         </div>  
@@ -50,62 +50,63 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="main-content">
-                <h3 style="text-align:center;"><strong>Signup Social Network</strong></h3><hr>
-            </div>
-            <div class="l-part">
-                <form action="" method="post">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                        <input type="text" name="first_name" class="form-control" placeholder="First Name" required="required">
-                    </div><br>
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                        <input type="text" name="last_name" class="form-control" placeholder="Last Name" required="required">
-                    </div><br>
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                        <input id="password" type="password"  name="u_password" class="form-control" placeholder="Password" required="required">
-                    </div><br>
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="email" type="email" name="u_email" class="form-control" placeholder="Email" required="required">
-                    </div><br>
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-chevron-down"></i></span>
-                        <select name="u_country" class="form-control" id="" required="required">
-                            <option disabled>Select Your Country</option>
-                            <option>Nepal</option>
-                            <option>Germany</option>
-                            <option>China</option>
-                            <option>Japan</option>
-                            <option>USA</option>
-                            <option>Norway</option>
-                            <option>Finland</option>
-                            <option>India</option>
-                            <option>Pakistan</option>
-                        </select>
-                    </div><br>
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-chevron-down"></i></span>
-                        <select name="u_gender" class="form-control input-md" id="" required="required">
-                            <option disabled>Select Your Gender</option>
-                            <option>Male</option>
-                            <option>Female</option>
-                            <option>Others</option>
+                <div class="header">
+                    <h3 style="text-align:center;"><strong>Signup Social Network</strong></h3><hr>
+                </div>
+            
+                <div class="l-part">
+                    <form action="" method="post">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                            <input type="text" name="first_name" class="form-control" placeholder="First Name" required="required">
+                        </div><br>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                            <input type="text" name="last_name" class="form-control" placeholder="Last Name" required="required">
+                        </div><br>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input id="password" type="password"  name="u_password" class="form-control" placeholder="Password" required="required">
+                        </div><br>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input id="email" type="email" name="u_email" class="form-control" placeholder="Email" required="required">
+                        </div><br>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-chevron-down"></i></span>
+                            <select name="u_country" class="form-control" id="" required="required">
+                                <option disabled>Select Your Country</option>
+                                <option>Nepal</option>
+                                <option>Germany</option>
+                                <option>China</option>
+                                <option>Japan</option>
+                                <option>USA</option>
+                                <option>Norway</option>
+                                <option>Finland</option>
+                                <option>India</option>
+                                <option>Pakistan</option>
+                            </select>
+                        </div><br>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-chevron-down"></i></span>
+                            <select name="u_gender" class="form-control input-md" id="" required="required">
+                                <option disabled>Select Your Gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Others</option>
 
-                        </select>
-                    </div><br>
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                        <input type="date" name="u_birthday" class="form-control input-md" placeholder="Date" required="required">
-                    </div><br>
-                    <a style="text-decoration:none; float:right;color:#187FAB;" data-toggle="tooltip" title="Signin" href="signin.php">Already have an account?</a><br><br>
-                    <center><button id="signup" class="btn btn-info btn-lg" name="sign_up">Signup</button></center>
-                    <?php
-                        include("insert_user.php");
-                    ?>
-                </form>
-            </div>
+                            </select>
+                        </div><br>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                            <input type="date" name="u_birthday" class="form-control input-md" placeholder="Date" required="required">
+                        </div><br>
+                        <a style="text-decoration:none; float:right;color:#187FAB;" data-toggle="tooltip" title="Signin" href="signin.php">Already have an account?</a><br><br>
+                        <center><button id="signup" class="btn btn-info btn-lg" name="sign_up">Signup</button></center>
+                        <!-- <?php  include("insert_user.php");?> -->
+                    </form>
+                </div>
+             </div>
         </div>
     </div>    
 </body>
