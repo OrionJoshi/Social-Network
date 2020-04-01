@@ -44,18 +44,18 @@
     }
     #login{
         width:60%;
-        background-color:#fff;
+        /* background-color:#fff;
         border:1px solid #1da1f2;
-        color:#1da1f2;
+        color:#1da1f2; */
         border-radius:30px;
     }
-    #login:hover{
+    /* #login:hover{
         width:60%;
         background-color:#fff;
         color:#1da1f2;
         border:1px solid #1da1f2;
         border-radius:30px;
-    }
+    } */
     .well{
         background-color:#187FAB;
     }
