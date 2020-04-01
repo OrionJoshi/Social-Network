@@ -14,6 +14,30 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
 </head>
+<style>
+    body{
+        overflow-x:hidden;
+    }
+    .main-content{
+        width:50%;
+        height:40%;
+        margin:10px auto;
+        background-color:#fff;
+        border:2px solid #e6e6e6;
+        padding:40px 50px;
+    }
+    .header{
+        border:0px solid #000;
+        margin-bottom:5px;
+    }
+    .well{
+        background-color:#187FAB;
+    }
+    #signup{
+        width:60%;
+        border-radius:30px;
+    }
+</style>
 <body>
 
     <div class="row">
@@ -40,11 +64,11 @@
                     </div><br>
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                        <input type="password" name="u_password" class="form-control" placeholder="Password" required="required">
+                        <input id="password" type="password"  name="u_password" class="form-control" placeholder="Password" required="required">
                     </div><br>
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input type="email" name="u_email" class="form-control" placeholder="Email" required="required">
+                        <input id="email" type="email" name="u_email" class="form-control" placeholder="Email" required="required">
                     </div><br>
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-chevron-down"></i></span>
@@ -75,9 +99,11 @@
                         <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                         <input type="date" name="u_birthday" class="form-control input-md" placeholder="Date" required="required">
                     </div><br>
-                    <a style="text-decoration:none; float:right;color:#187FAB;" data-toggle="tooltip" title="Signin" href="signin.php"></a><br><br>
+                    <a style="text-decoration:none; float:right;color:#187FAB;" data-toggle="tooltip" title="Signin" href="signin.php">Already have an account?</a><br><br>
                     <center><button id="signup" class="btn btn-info btn-lg" name="sign_up">Signup</button></center>
-
+                    <?php
+                        include("insert_user.php");
+                    ?>
                 </form>
             </div>
         </div>
