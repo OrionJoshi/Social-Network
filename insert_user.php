@@ -20,6 +20,16 @@
             echo "<script>alert('Password Should be minimun 9 character!');</script>";
             exit();
         }
+        $check_email = "SELECT * FROM users WHERE user_email = '$email'";
+        $run_email = mysqli_query($check_email);
+
+        $check = mysqli_num_rows($run_email);
+
+        if($check == 1){
+            echo "<script>alert('Email Already exits,Please try using another email');</script>";
+            echo "<script>window.open('signup.php','_self')</script>";
+            exit();
+        }
 
     }
 
