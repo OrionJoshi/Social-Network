@@ -32,18 +32,14 @@
         }
         $rand = rand(1,3);    //Random Number between 1 to 3 generated
 
-        if($rand == 1){
-            $profile_pic = "users/male.jpg";
-        }
-        elseif($rand ==2){
-            $profile_pic = "users/male1.jpg";
-        }elseif($rand == 3){
-            $profile_pic = "users/female.png";
-        }
-
-
-
-
+            if($rand == 1){
+                $profile_pic = "users/male.jpg";
+            }
+            elseif($rand ==2){
+                $profile_pic = "users/male1.jpg";
+            }elseif($rand == 3){
+                $profile_pic = "users/female.png";
+            }
 
     }
 
