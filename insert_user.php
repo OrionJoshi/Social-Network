@@ -30,6 +30,11 @@
             echo "<script>window.open('signup.php','_self')</script>";
             exit();
         }
+        $rand = rand(1,3);    //Random Number between 1 to 3 generated
+
+            
+
+
 
     }
 
