@@ -27,7 +27,7 @@
                         <input type="email" name="email" placeholder="Email" required="required" class="form-control input-md"><br>
                         <div class="overlap-text">
                             <input type="password" name="pass" placeholder="Password" required = "required" class="form-control input-md"><br>
-                            
+                            <a href="forget_password.php">Forgot Password?</a>
                         </div>
                     </form>
                 </div>
