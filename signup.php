@@ -103,7 +103,7 @@
                         </div><br>
                         <a style="text-decoration:none; float:right;color:#187FAB;" data-toggle="tooltip" title="Signin" href="signin.php">Already have an account?</a><br><br>
                         <center><button id="signup" class="btn btn-info btn-lg" name="sign_up">Signup</button></center>
-                        <!-- <?php  include("insert_user.php");?> -->
+                        <?php  include("insert_user.php");?>
                     </form>
                 </div>
              </div>
