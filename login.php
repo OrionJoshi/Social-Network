@@ -16,6 +16,20 @@
             </div>
         </div>  
     </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="main-content">
+                <div class="header">
+                    <h3>Login To Social Network</h3>
+                </div>
+                <div class="l-part">
+                    <form action="" method="post">
+                        <input type="email" name="email" placeholder="Email" required="required" class="form-control input-md"><br>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
