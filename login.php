@@ -25,6 +25,10 @@
                 <div class="l-part">
                     <form action="" method="post">
                         <input type="email" name="email" placeholder="Email" required="required" class="form-control input-md"><br>
+                        <div class="overlap-text">
+                            <input type="password" name="pass" placeholder="Password" required = "required" class="form-control input-md"><br>
+                            
+                        </div>
                     </form>
                 </div>
             </div>
