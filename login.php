@@ -28,6 +28,9 @@
                         <div class="overlap-text">
                             <input type="password" name="pass" placeholder="Password" required = "required" class="form-control input-md"><br>
                             <a style="text-decoration:none;float:right;color:#187FAB;" data-toggle="tooltip" title="Reset Password" href="forget_password.php">Forgot Password?</a>
+                            <a style="text-decoration:none; float:right;color:#187FAB;" data-toggle="tooltip" title="Signin" href="signin.php">Dont have an account?</a><br><br>
+                            <center><button id="signin" class="btn btn-info btn-lg" name="login">Login</button></center>
+                            <?php include("login.php");?>
                         </div>
                     </form>
                 </div>
