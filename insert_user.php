@@ -2,13 +2,13 @@
     include('includes/connection.php');
 
     if(isset($_POST['sign_up'])){
-        $first_name = htmlentities(mysqli_real_escape_string($conn,$_POST['first_name']));
-        $last_name = htmlentities(mysqli_real_escape_string($conn,$_POST['last_name']));
-        $pass = htmlentities(mysqli_real_escape_string($conn,$_POST['u_pass']));
-        $email = htmlentities(mysqli_real_escape_string($conn,$_POST['u_email']));
-        $country = htmlentities(mysqli_real_escape_string($conn,$_POST['u_country']));
-        $gender = htmlentities(mysqli_real_escape_string($conn,$_POST['u_gender']));
-        $birthday = htmlentities(mysqli_real_escape_string($conn,$_POST['u_birthday']));
+        $first_name = htmlentities(mysqli_real_escape_string($con,$_POST['first_name']));
+        $last_name = htmlentities(mysqli_real_escape_string($con,$_POST['last_name']));
+        $pass = htmlentities(mysqli_real_escape_string($con,$_POST['u_password']));
+        $email = htmlentities(mysqli_real_escape_string($con,$_POST['u_email']));
+        $country = htmlentities(mysqli_real_escape_string($con,$_POST['u_country']));
+        $gender = htmlentities(mysqli_real_escape_string($con,$_POST['u_gender']));
+        $birthday = htmlentities(mysqli_real_escape_string($con,$_POST['u_birthday']));
         $status = "Verified";
         $posts = "no";
         $newgid = sprintf('%05d',rand(0,999999));
@@ -40,7 +40,24 @@
             }elseif($rand == 3){
                 $profile_pic = "users/female.png";
             }
+        $insert = "INSERT INTO users(f_name,l_name,user_name,describe_user,relationship
+        ,user_pass,user_email,user_country,user_gender,user_birthdate,user_image,user_cover
+        ,user_reg_date,status,posts,recovery_account)
+        VALUES('$first_name','$last_name','$username','Hello new user! Welcome Here',
+        '...','$pass','$email','$country','$gender','$birthday','$profile_pic','cover/default-cover.jpg',
+        NOW(),'$status','$posts','Iwanttoputdingintheuniverse')";
 
+        $query = mysqli_query($con,$insert);
+
+        if($query){
+            echo "<script>alert('Well Done $first_name, you are good to go.');</script>";
+            echo "<script>window.open('signin.php','_self')</script>";
+            
+        }else{
+            echo "<script>alert('Registration Failed, Please try agian!');</script>";
+            echo "<script>window.open('signup.php','_self')</script>";
+           
+        }
     }
 
 ?>
