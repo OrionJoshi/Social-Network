@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -9,7 +9,13 @@
 <title>Signin</title>
 </head>
 <body>
-    
+<div class="row">
+        <div class="col-sm-12">
+            <div class="well well-sm">
+                <center><h1 style="color:black;">Social Network</h1></center>
+            </div>
+        </div>  
+    </div>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
