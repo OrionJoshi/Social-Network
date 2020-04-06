@@ -15,7 +15,7 @@
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <?php
-                    session_start();
+                    
                     $user = $_SESSION['user_email'];
 
                     $get_user = "SELECT * FROM users WHERE user_email='$user'";
