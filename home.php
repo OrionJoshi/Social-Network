@@ -1,3 +1,5 @@
 <?php
-    echo "Welcome To Home";
+    session_start();
+    echo $_SESSION['user_email'];
+
 ?>
