@@ -3,7 +3,7 @@
     session_start();
     include("includes/header.php");
 
-    if(isset($_SESSION['user_email'])){
+    if(!isset($_SESSION['user_email'])){
         header("location:index.php");
     }
 ?>
@@ -19,7 +19,6 @@
     ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo "$user_name";?></title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
@@ -28,9 +27,22 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <title><?php echo "$user_name";?></title>
 
 </head>
 <body>
-    
+    <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <?php
+                echo"
+                    <div>
+                        <div><img class='img-rounded' src='$user_cover' alt ='cover'</div>
+                    </div>
+                ";
+            ?>
+        </div>
+    </div>
 </body>
 </html>
