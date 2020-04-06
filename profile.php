@@ -31,6 +31,18 @@
 
 </head>
 <body>
-    
+    <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <?php
+                echo"
+                    <div>
+                        <div><img class='img-rounded' src='$user_cover' alt ='cover'</div>
+                    </div>
+                ";
+            ?>
+        </div>
+    </div>
 </body>
 </html>
