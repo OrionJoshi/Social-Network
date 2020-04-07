@@ -28,6 +28,17 @@
     #cover-img{
         height:400px;
         width:100%;
+    }#profile-img{
+        position:absolute;
+        top:160px;
+        left:40px;
+    }#update_profile{
+        position:relative;
+        top:150px;
+        cursor:pointer;
+        left:93px;
+        border-radius:4px;
+        background-color: rgba(0,0,0,0.1);
     }
 </style>
 <body>
@@ -55,6 +66,15 @@
                             </ul>
                         </form>
                     </div>
+                    <div id='profile-img'>
+                        <img src='$user_image' alt='profile' class='img-circle' width='180px' height='185px'>
+                        <form action'= 'profile.php?u_id=$user_id' method='post' enctype='multipart/form-data'>
+                                <label id='update_profile'>Select profile
+                                <input type='file' name='u_image' size='60' />
+                                </label><br><br>
+                                <button id = 'button_profile' name='update' class='btn btn-info'>Update Profile</button>        
+                        </form>
+                    </div><br>
                 ";
             ?>
         </div>
