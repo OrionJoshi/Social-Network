@@ -39,6 +39,13 @@
                 echo"
                     <div>
                         <div><img class='img-rounded' src='$user_cover' alt ='cover'</div>
+                        <form action='profile.php?u_id=$user_id' method='post' enctype='multipart/form-data'>
+                            <ul class= 'nav pull-left' style='position:absolute;top:10px;left:40px;'>
+                                <li class='dropdown'>
+                                    <button class='dropdown-toggle btn btn-default' data-toggle='dropdown'>Change Cover</button>
+                                </li>
+                            </ul>
+                        </form>
                     </div>
                 ";
             ?>
