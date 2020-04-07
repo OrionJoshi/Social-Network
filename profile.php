@@ -112,6 +112,32 @@
                 }
             ?>
         </div>
+        <?php
+           
+            if(isset($_POST['update'])){
+
+                $u_image = $_FILES['u_image']['name'];
+                $image_temp = $_FILES['u_image']['tmp_name'];
+
+                //$random_number = rand(1,100);
+
+                if($u_image==''){
+                    echo "<script>alert('Please Select profile Image')</script>";
+                    echo "<script>window.open('profile.php?u_id=$user_id','_self')</script>";
+                    exit();
+                }else{
+                    move_uploaded_file($image_temp,"users/$u_image");
+                    $update = "UPDATE users SET user_image='users/$u_image' WHERE user_id = '$user_id'";
+                    $run = mysqli_query($con,$update);
+
+                    if($run){
+                        echo "<script>alert('Your Profile Image Updated')</script>";
+                        echo "<script>window.open('profile.php?u_id=$user_id','_self')</script>";
+                    
+                    }
+                }
+            }
+        ?>
     </div>
 </body>
 </html>
