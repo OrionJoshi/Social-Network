@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="home_style2.css">
+    <link rel="stylesheet" type="text/css" href="style/home_style2.css">
 </head>
 <body>
     <div class="row">
@@ -32,7 +32,7 @@
             <?php
                 echo"
                     <div>
-                        <div><img class='img-rounded' src='$user_cover' alt ='cover'</div>
+                        <div><img id='cover-img' class='img-rounded' src='$user_cover' alt ='cover'</div>
                         <form action='profile.php?u_id=$user_id' method='post' enctype='multipart/form-data'>
                             <ul class= 'nav pull-left' style='position:absolute;top:10px;left:40px;'>
                                 <li class='dropdown'>
