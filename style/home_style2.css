@@ -1,3 +1,6 @@
+body{
+    overflow-x: hidden;
+}
 label{
     padding: 7px;
     display: table;
