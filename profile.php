@@ -24,6 +24,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style/home_style2.css">
 </head>
+<style>
+    #cover-img{
+        height:400px;
+        width:100%;
+    }
+</style>
 <body>
     <div class="row">
         <div class="col-sm-2">
