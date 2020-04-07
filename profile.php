@@ -34,11 +34,19 @@
         left:40px;
     }#update_profile{
         position:relative;
-        top:150px;
+        top:-33px;
         cursor:pointer;
         left:93px;
         border-radius:4px;
         background-color: rgba(0,0,0,0.1);
+        transform:translate(-50%,-50%);
+    }#button_profile{
+        position:absolute;
+        top:80%;
+        left:50%;
+        cursor:pointer;
+        transform:translate(-50%,-50%);
+
     }
 </style>
 <body>
@@ -76,6 +84,32 @@
                         </form>
                     </div><br>
                 ";
+            ?>
+            <?php
+                if(isset($_POST['submit'])){
+
+                    $u_cover = $_FILES['u_cover']['name'];
+                    $image_temp = $_FILES['u_cover']['tmp_name'];
+
+                    //$random_number = rand(1,100);
+
+                    if($u_cover==''){
+                        echo "<script>alert('Please Select Cover Image')</script>";
+                        echo "<script>window.open('profile.php?u_id=$user_id','_self')</script>";
+                        exit();
+                    }else{
+                        move_uploaded_file($image_temp,"cover/$u_cover");
+                        $update = "UPDATE users SET user_cover='cover/$u_cover' WHERE user_id = '$user_id'";
+                        $run = mysqli_query($con,$update);
+
+                        if($run){
+                            echo "<script>alert('Cover Image Updated')</script>";
+                            echo "<script>window.open('profile.php?u_id=$user_id','_self')</script>";
+                           
+                        }
+                    }
+
+                }
             ?>
         </div>
     </div>
