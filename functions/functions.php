@@ -14,6 +14,11 @@
 
             $random_number = rand(1,100);
 
+            if(strlen($content)>250){
+                echo "<script>alert('Please use 250 or less than 250 word!')</script>";
+                echo "<script>window.open('home.php','_self')</script>";
+               
+            }
         }
     }
 
