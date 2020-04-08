@@ -36,6 +36,7 @@
                     </label>
                     <button id="btn-post" class="btn btn-success" name="sub">Post</button>
                 </form>
+                <?php insertPost(); ?>
             </center>
         </div>
     </div>
