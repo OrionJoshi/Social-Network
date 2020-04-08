@@ -34,6 +34,38 @@
                
                     }
                     exit();
+                }else{
+                    if($upload_image == '' && $content == ''){
+                        echo "<script>alert('Error Occured while uploading!')</script>";
+                        echo "<script>window.open('home.php','_self')</script>";
+
+                    }else{
+                        if($content == ''){
+                            move_uploaded_file($image_tmp,"imagepost/$upload_image.$random_number");
+                            $insert = "INSERT INTO posts(user_id, post_content, upload_image, post_date) VALUES ('$user_id','NO','$upload_image.$random_numbe', NOW())";
+                            $run = mysqli_query($con,$insert);
+                            if($run){
+                                echo "<script>alert('Your Post Updated!')</script>";
+                                echo "<script>window.open('home.php','_self')</script>";
+        
+                                $update = "UPDATE users SET posts = 'yes' WHERE user_id = '$user_id'";
+                                $run_update = mysqli_query($con,$update);
+                       
+                            }
+                            exit();
+                        }else{
+
+                            $insert = "INSERT INTO posts(user_id, post_content, post_date) VALUES ('$user_id','$content', NOW())";
+                            $run = mysqli_query($con,$insert);
+                            if($run){
+                                echo "<script>alert('Your Post Updated!')</script>";
+                                echo "<script>window.open('home.php','_self')</script>";
+        
+                                $update = "UPDATE users SET posts = 'yes' WHERE user_id = '$user_id'";
+                                $run_update = mysqli_query($con,$update);
+                            }
+                        }
+                    }
                 }
             }
         }
