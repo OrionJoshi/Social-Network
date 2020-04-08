@@ -1,4 +1,14 @@
+<style>
+    .pagination a{
+        color:black;
+        float:left;
+        padding:8px 16px;
+        text-decoration:none;
+        transition:background-color .3s;
+    }
+    .pagination a:hover:not(.active){background-color:#ddd;}
 
+</style>
 
 <?php
 
