@@ -192,5 +192,6 @@
             ";
             }
         }
+        include("pagination.php");
     }
 ?>
