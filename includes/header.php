@@ -1,6 +1,7 @@
 <?php
     
     include("connection.php");
+    include("functions/functions.php");
 ?>
 <nav class="navbar navbar-default">
     <div class="container-fluid">
