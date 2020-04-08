@@ -31,7 +31,7 @@
             <center>
                 <form action="home.php?id=<?php echo $user_id;?>" method="post" id="f" enctype="multipart/form-data">
                     <textarea class="form-control" name="content" id="content"  rows="4" placeholder="What's in your mind?"></textarea><br>
-                    <label for="" class="btn btn-warning" id="upload_image_button">Select Image
+                    <label class="btn btn-warning" id="upload_image_button">Select Image
                         <input type="file" name="upload_image" size="30">
                     </label>
                     <button id="btn-post" class="btn btn-success" name="sub">Post</button>

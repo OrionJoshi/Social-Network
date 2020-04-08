@@ -22,7 +22,7 @@
                 if(strlen($upload_image)>=1 && strlen($content)>=1){
                     move_uploaded_file($image_tmp,"imagepost/$upload_image.$random_number");
 
-                    $insert = "INSERT INTO posts(user_id, post_content, upload_image, post_date) VALUES ('$user_id','$content','$upload_image.$random_numbe', NOW())";
+                    $insert = "INSERT INTO posts(user_id, post_content, upload_image, post_date) VALUES ('$user_id','$content','$upload_image.$random_number', NOW())";
                     $run = mysqli_query($con,$insert);
 
                     if($run){
