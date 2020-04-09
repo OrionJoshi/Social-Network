@@ -203,10 +203,13 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='col-sm-2'>
+                                    <div class='col-sm-12'>
                                         <img id='posts-img' src='imagepost/$upload_image' style='height:350px;'>
                                     </div>
-                                </div>
+                                </div><br>
+                                <a href='single.php?post_id=$post_id' style='float:right;'><button class='btn btn-success'>View</button></a><br>
+                                <a herf='functions/delete_post.php?post_id=$post_id' style='float:right;'><button class='btn btn-danger'>Delete</button></a><br>
+
                             </div>
                         
                         ";
