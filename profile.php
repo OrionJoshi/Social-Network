@@ -163,6 +163,44 @@
                     ";
             ?>
         </div>
+        <div class="col-sm-6">
+            <?php
+                global $con;
+                if(isset($_GET['u_id'])){
+                    $u_id = $_GET['u_id'];
+                }
+                $get_posts = "SELECT * FROM posts WHERE user_id='$u_id' ORDER BY 1 DESC LIMIT 5";
+                $run_posts = mysqli_query($con,$get_posts);
+
+                while($row_posts = mysqli_fetch_array($run_posts)){
+                    $posts_id = $row_posts['post_id'];
+                    $user_id = $row_posts['user_id'];
+                    $content = $row_posts['post_content'];
+                    $upload_image = $row_posts['upload_image'];
+                    $post_date = $row_posts['post_date'];
+
+                    $user = "SELECT * FROM users WHERE user_id = '$user_id' AND posts='yes'";
+                    $run_user = mysqli_query($con,$user);
+                    $row_user = mysqli_fetch_array($run_user);
+
+                    $user_name = $row_user['user_name'];
+                    $user_image = $row_user['user_image'];
+
+                    //for displaying the posts
+
+                    if($content=="NO" && strlen($upload_image)>=1){
+                        echo"
+                            <div id='own_posts'>
+                                <div class='row'>
+                                </div>
+                            </div>
+                        
+                        ";
+
+                    }
+                }
+            ?>
+        </div>
     </div>
 </body>
 </html>
