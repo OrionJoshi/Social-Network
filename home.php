@@ -43,7 +43,7 @@
     <div class="row">
         <div class="col-sm-12">
             <center><h2><strong>News Feed</strong></h2></center>
-            <?php //echo get_posts();?>
+            <?php echo get_posts();?>
         </div>
 
     </div>

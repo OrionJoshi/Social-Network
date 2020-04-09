@@ -15,7 +15,7 @@
     $query = "SELECT * FROM posts";
 
     $result = mysqli_query($con,$query);
-    $total_posts = mysqli_num_posts($result);
+    $total_posts = mysqli_num_rows($result);
     $total_pages = ceil($total_posts/$per_page);
 
     echo"
