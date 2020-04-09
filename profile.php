@@ -192,6 +192,10 @@
                         echo"
                             <div id='own_posts'>
                                 <div class='row'>
+                                    <div class='col-sm-2'>
+                                    <p><img src='$user_image' class = 'img-circle' width='100px' height='100px'</p>
+
+                                    </div>
                                 </div>
                             </div>
                         
