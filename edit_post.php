@@ -18,6 +18,26 @@
     <title>Edit Post</title>
 </head>
 <body>
+    <div class="row">
+        <div class="col-sm-3">
+        </div>
+        <div class="col-sm-6">
+            <?php
+                if(isset($_GET['post_id'])){
+                    $get_post_id = $_GET['post_id'];
+
+                    $get_post = "SELECT * FROM posts WHERE post_id = '$get_post_id'";
+                    $run_post = mysqli_query($con,$get_post);
+                    $row = mysqli_fetch_array($run_post);
+                    $post_con = $row['post_content'];
+                }
+            
+            ?>
+            <form action="" method="post" id ="f">
+                
+            </form>
+        </div>
+    </div>
     
 </body>
 </html>
