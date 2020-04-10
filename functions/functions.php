@@ -211,7 +211,24 @@
             $upload_image = $row_posts['upload_image'];
             $post_date = $row_posts['post_date'];
 
+            $user = "SELECT * FROM users WHERE user_id='$user_id' AND post='yes'";
+
+            $run_user = mysqli_query($con,$user);
+            $row_user = mysqli_fetch_array($run_user);
+
+            $user_name = $row_user['user_name'];
+            $user_image = $row_user['user_image'];
+
+            $user_email = $_SESSION['user_email'];
+            $get_comment = "SELECT * FROM users WHERE  user_email = '$user_email'";
+            $run_com = mysqli_query($con,$get_comment);
+            $row_com = mysqli_fetch_array($run_com);
+
+            $user_com_id = $row_com['user_id'];
+            $user_com_name = $row_com['user_name'];
+
             
+
         }
 
     }
