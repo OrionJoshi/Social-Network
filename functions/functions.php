@@ -194,4 +194,25 @@
         }
         include("pagination.php");
     }
+
+    function single_post(){
+
+        if(isset($_GET['post_id'])){
+            global $con;
+
+            $get_id = $_GET['post_id'];
+            $get_posts = "SELECT * FROM posts WHERE post_id = '$get_id'";
+            $run_posts =  mysqli_query($con,$get_posts);  
+            $row_posts = mysqli_fetch_array($run_posts);
+
+            $post_id = $row_posts['post_id'];
+            $user_id = $row_posts['user_id'];
+            $content = $row_posts['post_content'];
+            $upload_image = $row_posts['upload_image'];
+            $post_date = $row_posts['post_date'];
+
+            
+        }
+
+    }
 ?>
