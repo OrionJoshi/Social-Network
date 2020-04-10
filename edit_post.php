@@ -34,7 +34,8 @@
             
             ?>
             <form action="" method="post" id ="f">
-                
+                <center><h2>Edit Your Post</h2></center><br>
+                <textarea name="content" id="" cols="83" rows="4" class="form-control"><?php echo $post_con;?></textarea>
             </form>
         </div>
     </div>
