@@ -19,6 +19,11 @@
     
 </head>
 <body>
-    
+    <div class="row">
+        <div class="co-sm-12">
+            <center><h2>Comments</h2><br></center>
+            <?php single_post(); ?>
+        </div>
+    </div>
 </body>
 </html>
