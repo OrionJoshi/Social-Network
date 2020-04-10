@@ -227,7 +227,12 @@
             $user_com_id = $row_com['user_id'];
             $user_com_name = $row_com['user_name'];
 
+            if(isset($_GET['post_id'])){
+                $post_id = $_GET['post_id'];
+            }
             
+
+
 
         }
 
