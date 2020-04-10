@@ -1,6 +1,6 @@
 <?php
 
-    $con = mysqli_connect("localhost","root","","social_network");
+    $con = mysqli_connect("localhost","root","","social_network")or die("Connection was not established");
 
     //function for inserting the post
     function insertPost(){
