@@ -308,9 +308,12 @@
                         }
 
                     }
+                    include("functions/delete_post.php");
                     
                 }
             ?>
+        </div>
+        <div class='col-sm-2'>
         </div>
     </div>
 </body>
