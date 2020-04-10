@@ -35,8 +35,26 @@
             ?>
             <form action="" method="post" id ="f">
                 <center><h2>Edit Your Post</h2></center><br>
-                <textarea name="content" id="" cols="83" rows="4" class="form-control"><?php echo $post_con;?></textarea>
+                <textarea name="content" id="" cols="83" rows="4" class="form-control"><?php echo $post_con;?></textarea><br>
+                <input type="submit" name="update" value="Update Post" class="btn btn-info">
             </form>
+
+            <?php
+                if(isset($_POST['update'])){
+                    $content = $_POST['content'];
+
+                    $update_post = "UPDATE posts SET post_content='$content' WHERE post_id = '$get_post_id'";
+                    $run_update = mysqli_query($con,$update_post);
+
+                    if($run_update){
+                        echo "<script>alert('A Post Have been Updated!')</script>";
+                        echo "<script>window.open('../home.php','_self')</script>";
+                    
+                    }
+                }
+            ?>
+        </div>
+        <div class="col-sm-3">
         </div>
     </div>
     
