@@ -46,7 +46,7 @@
                 ?>
                 <li><a href='profile.php?<?php echo "u_id=$user_id" ?>'><?php echo $first_name;?></a></li>
                 <li><a href="home.php">Home</a></li>
-                <li><a href="home.php">find people</a></li>
+                <li><a href="member.php">find people</a></li>
                 <li><a href="messages.php?u_id=new">Messages</a></li>
                 <?php
                     echo "
