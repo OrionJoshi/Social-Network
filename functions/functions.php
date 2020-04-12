@@ -243,6 +243,8 @@
 
             if($p_id != $post_id ){
                 echo "<script>alert('Error!')</script>";
+                echo "<script>window.open('home.php','_self')</script>";
+
             }
 
 
