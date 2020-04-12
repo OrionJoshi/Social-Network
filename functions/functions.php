@@ -220,7 +220,7 @@
             $user_image = $row_user['user_image'];
 
             $user_email = $_SESSION['user_email'];
-            $get_comment = "SELECT * FROM users WHERE  user_email = '$user_email'";
+            $get_comment = "SELECT * FROM users WHERE  user_email = '$user_com'";
             $run_com = mysqli_query($con,$get_comment);
             $row_com = mysqli_fetch_array($run_com);
 
@@ -364,6 +364,10 @@
                     }else{
                         $insert = "INSERT INTO comments(post_id,user_id,comment,comment_auther,date) VALUES('$post_id','$user_id','$comment','$user_com_name',NOW()";
                         $run = mysqli_query($con,$insert);
+
+                        echo "<script>alert('Your comment added!')</script>";
+                        echo "<script>window.open('single.php?post_id=$post_id','_self')</script>";
+                   
                     }
                 }
             }
