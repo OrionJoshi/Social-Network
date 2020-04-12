@@ -363,12 +363,12 @@
                         echo "<script>alert('Enter your comment!')</script>";
                         echo "<script>window.open('single.php?post_id=$post_id','_self')</script>";
                     }else{
-                        $insert = "INSERT INTO comments(post_id,user_id,comment,comment_auther,date) VALUES('$post_id','$user_id','$comment','$user_com_name',NOW()";
-                        $run = mysqli_query($con,$insert);
+                        $insert = "INSERT INTO comments(post_id,user_id,comment,comment_auther,date) VALUES('$post_id','$user_id','$comment','$user_com_name',NOW())";
+                       if (mysqli_query($con,$insert)){
+                            echo "<script>alert('Your comment added!')</script>";
+                            echo "<script>window.open('single.php?post_id=$post_id','_self')</script>";
+                       }
 
-                        echo "<script>alert('Your comment added!')</script>";
-                        echo "<script>window.open('single.php?post_id=$post_id','_self')</script>";
-                   
                     }
                 }
             }

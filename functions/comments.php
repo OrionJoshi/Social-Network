@@ -8,7 +8,7 @@
     while( $row = mysqli_fetch_array($run_com)){
 
         $com = $row['comment'];
-        $com_name = $row['comment_author'];
+        $com_name = $row['comment_auther'];
         $date = $row['date'];
 
         echo"
