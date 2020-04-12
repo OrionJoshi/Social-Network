@@ -230,6 +230,22 @@
             if(isset($_GET['post_id'])){
                 $post_id = $_GET['post_id'];
             }
+            $get_posts = "SELECT post_id FROM users WHERE post_id = '$post_id'";
+
+            $run_user = mysqli_query($con,$get_posts);
+            $post_id = $_GET['post_id'];
+            $get_user = "SELECT * FROM posts WHERE post_id = '$post_id'";
+            $run_user = mysqli_query($con,$get_user);
+
+            $row = mysqli_fetch_array($run_user);
+
+            $p_id = $row['post_id'];
+
+            if($p_id != $post_id ){
+                echo "<script>alert('Error!')</script>";
+            }
+
+
             
 
 
