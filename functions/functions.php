@@ -347,6 +347,7 @@
                                 <div class='panel-body'>
                                     <form action='' method='post' class='form-inline'>
                                         <textarea placeholder='Write your comment here!' class='pd-cmnt-textarea' name='comment'></textarea>
+                                        <button class='btn btn-info pull-right' name='reply'>Comment</button>
                                     </form>
                                 </div>
                             </div>
