@@ -338,13 +338,8 @@
                     </div><br><br>
                 ";
                 }    //else condition ending
-
+                //include("comments.php");
             }
-
-
-            
-
-
 
         }
 
