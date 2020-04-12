@@ -354,6 +354,15 @@
                         </div>
                     </div>
                 ";
+
+                if(isset($_POST['reply'])){
+                    $comment = htmlentities($_POST['comment']);
+
+                    if($comment == ""){
+                        echo "<script>alert('Enter your comment!')</script>";
+
+                    }
+                }
             }
 
         }
