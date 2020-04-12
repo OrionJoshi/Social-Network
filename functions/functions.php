@@ -339,6 +339,20 @@
                 ";
                 }    //else condition ending
                 //include("comments.php");
+
+                echo"
+                    <div class='row'>
+                        <div class='col-md-6 col-md-offset-3'>
+                            <div class='panel panel-info'>
+                                <div class='panel-body'>
+                                    <form action='' method='post' class='form-inline'>
+                                        <textarea placeholder='Write your comment here!' class='pd-cmnt-textarea' name='comment'></textarea>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ";
             }
 
         }
