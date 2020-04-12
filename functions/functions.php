@@ -338,7 +338,7 @@
                     </div><br><br>
                 ";
                 }    //else condition ending
-                //include("comments.php");
+                include("comments.php");
 
                 echo"
                     <div class='row'>
