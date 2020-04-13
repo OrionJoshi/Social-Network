@@ -29,7 +29,10 @@
                         <button class="btn btn-info" type="submit" name="search_user_btn">Search</button>
                     </form>
                 </div>
-            </div>
+                <div class="col-sm-4">
+                </div>
+            </div><br><br>
+            <?php search_user();?>
        </div>
     </div>
     
