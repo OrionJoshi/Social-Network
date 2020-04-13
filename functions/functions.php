@@ -271,7 +271,6 @@
                                         <img id='posts-img' src='imagepost/$upload_image' style='height:350px;'>
                                     </div>
                                 </div><br>
-                                <a href='single.php?post_id=$post_id' style='float:right;'><button class='btn btn-info'>Comment</button></a><br>
                             </div>
                             <div class='col-sm-3'>
     
@@ -302,7 +301,6 @@
                                     <img id='posts-img' src='imagepost/$upload_image' style='height:350px;'>
                                 </div>
                             </div><br>
-                            <a href='single.php?post_id=$post_id' style='float:right;'><button class='btn btn-info'>Comment</button></a><br>
                         </div>
                         <div class='col-sm-3'>
     
@@ -331,7 +329,6 @@
                                     <h3><p>$content</p></h3>
                                 </div>
                             </div><br>
-                            <a href='single.php?post_id=$post_id' style='float:right;'><button class='btn btn-info'>Comment</button></a><br>
                         </div>
                         <div class='col-sm-3'>
     
