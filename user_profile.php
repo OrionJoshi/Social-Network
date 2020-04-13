@@ -38,7 +38,7 @@
                     $run = mysqli_query($con,$select);
                     $row = mysqli_fetch_array($run);
 
-                    $username = $row_user['user_name'];
+                    $username = $row['user_name'];
         
                 }
             ?>
@@ -67,14 +67,39 @@
                         <div class='row'>
                             <div class='col-sm-1'></div>
                             <center>
-                                <div style='background-color:#e6e6e6;' class='col-sm-3'></div>
-                            </center>    
-                        </div>
+                                <div style='background-color:#e6e6e6;' class='col-sm-3'>
+                                    <h2>Information about </h2>
+                                    <img class='img-circle' src='$image' width='150' height='150'><br><br>
+                                    <ul class='list_group'>
+                                        <li class='list-group-item' title='Username'><strong>$f_name $l_name</strong></li>
+                                        <li class='list-group-item' title='Useremail'><strong>$user_email</strong></li>
+                                        <li class='list-group-item' title='User Status'><strong style='color:grey;'>$describe_user</strong></li>
+                                        <li class='list-group-item' title='relationship_status'><strong>$relationship_status</strong></li>
+                                        <li class='list-group-item' title='Gender'><strong>$gender</strong></li>
+                                        <li class='list-group-item' title='Country'><strong>$country</strong></li>
+                                    </ul>
+                                </div>
                     
+                    ";
+                    $user = $_SESSION['user_email'];
+                    $get_user = "SELECT * FROM users WHERE user_email='$user'";
+                    $run_user = mysqli_query($con,$get_user);
+                    $row = mysqli_fetch_array($run_user);
+
+                    $user_own_id = $row['user_id'];
+
+                    if($user_id == $user_own_id){
+                         echo "<a href='edit_profile.php?u_id=$user_own_id' class='btn btn-success'>Edit Profile</a><br><br><br>";
+                    }
+
+                    echo"
+                        </div>
+                        </center>
                     ";
                 }
             ?>
         </div>
     </div>
+            <?php } ?>
 </body>
 </html>
