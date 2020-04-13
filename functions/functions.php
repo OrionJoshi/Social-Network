@@ -377,7 +377,10 @@
         global $con;
 
         if(isset($_POST['search_user_btn'])){
-            $search_query = htmlentities($_POST['search_btn']);
+            $search_query = htmlentities($_POST['search_user']);
+            $get_user = "SELECT * FROM users WHERE f_name like '%$search_query%' OR l_name like '%$search_query%' OR user_name like '%$search_query%'";
+        }else{
+            $get_user = "SELECT * FROM users";
         }
     }
 ?>
