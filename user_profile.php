@@ -38,7 +38,7 @@
                     $run = mysqli_query($con,$select);
                     $row = mysqli_fetch_array($run);
 
-                    $username = $row_user['user_name'];
+                    $username = $row['user_name'];
         
                 }
             ?>
@@ -77,16 +77,29 @@
                                         <li class='list-group-item' title='relationship_status'><strong>$relationship_status</strong></li>
                                         <li class='list-group-item' title='Gender'><strong>$gender</strong></li>
                                         <li class='list-group-item' title='Country'><strong>$country</strong></li>
-                                        <li class='list-group-item' title='User REgistration Date'><strong>$register_date</strong></li>
                                     </ul>
-                        </div>
+                                </div>
                     
                     ";
                     $user = $_SESSION['user_email'];
                     $get_user = "SELECT * FROM users WHERE user_email='$user'";
+                    $run_user = mysqli_query($con,$get_user);
+                    $row = mysqli_fetch_array($run_user);
+
+                    $user_own_id = $row['user_id'];
+
+                    if($user_id == $user_own_id){
+                         echo "<a href='edit_profile.php?u_id=$user_own_id' class='btn btn-success'>Edit Profile</a><br><br><br>";
+                    }
+
+                    echo"
+                        </div>
+                        </center>
+                    ";
                 }
             ?>
         </div>
     </div>
+            <?php } ?>
 </body>
 </html>
