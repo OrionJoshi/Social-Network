@@ -73,3 +73,12 @@ form.search_form input[type=text]{
     width: 80%;
     background: #f1f1f1;
 }
+form.search_form button{
+    float: left;
+    width: 20%;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid gray;
+    border-left: none;
+    cursor: pointer;
+}
