@@ -21,6 +21,14 @@
     <div class="row">
        <div class='col-sm-12'>
             <center><h2>Find New People</h2></center><br><br>
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <form action="" method="post" class="search_form">
+                        <input type="text" placeholder="Search Friend" name="search_user">
+                    </form>
+                </div>
+            </div>
        </div>
     </div>
     
