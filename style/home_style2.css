@@ -82,3 +82,12 @@ form.search_form button{
     border-left: none;
     cursor: pointer;
 }
+form.search_form button:hover{
+    background:#0b7dda;
+}
+form.search_form::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
