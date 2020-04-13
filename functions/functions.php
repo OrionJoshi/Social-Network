@@ -397,12 +397,12 @@
                     <div class='col-sm-6'>
                         <div class='row' id='find_people'>
                             <div class='col-sm-4'>
-                                <a herf='user_profile.php?u_id=$user_id'>
+                                <a href='user_profile.php?u_id=$user_id'>
                                 <img src ='$user_image' width='150px' height ='140px' title='$username' style='float:left;margin='1px';'/>
                                 </a>
                             </div><br><br>
                             <div class='col-sm-6'>
-                                <a style='text-decoration:none; cursor:pointer;color:#3897f0;' herf='user_profile.php?u_id=$user_id'>
+                                <a style='text-decoration:none; cursor:pointer;color:#3897f0;' href='user_profile.php?u_id=$user_id'>
                                     <strong><h2>$f_name $l_name</h2></strong>
                                 </a>
                             </div>
