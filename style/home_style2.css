@@ -73,3 +73,21 @@ form.search_form input[type=text]{
     width: 80%;
     background: #f1f1f1;
 }
+form.search_form button{
+    float: left;
+    width: 20%;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid gray;
+    border-left: none;
+    cursor: pointer;
+}
+form.search_form button:hover{
+    background:#0b7dda;
+}
+form.search_form::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
