@@ -406,9 +406,11 @@
                                     <strong><h2>$f_name $l_name</h2></strong>
                                 </a>
                             </div>
+                            <div class='col-sm-3'></div>
                         </div>
                     </div>
-                </div>
+                    <div class='col-sm-4'></div>
+                </div><br>
             
             ";
 
