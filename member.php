@@ -26,6 +26,7 @@
                 <div class="col-sm-4">
                     <form action="" method="post" class="search_form">
                         <input type="text" placeholder="Search Friend" name="search_user">
+                        <button class="btn btn-info" type="submit" name="search_user_btn">Search</button>
                     </form>
                 </div>
             </div>
