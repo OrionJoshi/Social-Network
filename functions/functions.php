@@ -373,4 +373,11 @@
         }
 
     }
+    function search_user(){
+        global $con;
+
+        if(isset($_POST['search_user_btn'])){
+            $search_query = htmlentities($_POST['search_btn']);
+        }
+    }
 ?>
