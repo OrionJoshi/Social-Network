@@ -17,6 +17,46 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style/home_style2.css">
 </head>
+<style>
+    #scroll_messages{
+        max-height:500px;
+        overflow:scroll;
+    }
+    #btn-msg{
+        width:20%;
+        height:28px;
+        border-radius:5px;
+        margin:5px;
+        border:none;
+        color:$fff;
+        float:right;
+        background-color:$2ecc71;
+    }
+    #select_user{
+        max-height:500px;
+        overflow:scroll;
+    }
+    #green{
+        background-color:#2ecc71;
+        border-color:#27ae60;
+        width:45%;
+        padding:2.5px;
+        font-size:16px;
+        border-radius:3px;
+        float:left;
+        margin-bottom:5px;
+    }
+    #blue{
+        background-color:#3498db;
+        border-color:#2980b9;
+        width:45%;
+        padding:2.5px;
+        font-size:16px;
+        border-radius:3px;
+        float:right;
+        margin-bottom:5px;
+    }
+</style>
 <body>
     <div class="row">
       <?php
