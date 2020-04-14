@@ -145,7 +145,10 @@
                                             <img id='posts-img' src='imagepost/$upload_image' style='height:350px'>
                                         </div>
                                     </div><br>
-                                </div>
+                                    <a href='single.php?post_id=$post_id' style='float:right;'><button class='btn btn-success'>View</button></a>
+                                    <a href='functions/delete_post.php?post_id=$post_id' style='float:right;'><button class='btn btn-danger'>Delete</button></a>
+    
+                                </div><br><br><br>
                             
                             ";
                         }
