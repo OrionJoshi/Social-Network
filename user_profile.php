@@ -78,7 +78,7 @@
                                         <li class='list-group-item' title='Gender'><strong>$gender</strong></li>
                                         <li class='list-group-item' title='Country'><strong>$country</strong></li>
                                     </ul>
-                                </div>
+                                
                     
                     ";
                     $user = $_SESSION['user_email'];
@@ -93,6 +93,7 @@
                     }
 
                     echo"
+                        </div>
                         </div>
                         </center>
                     ";
