@@ -32,6 +32,13 @@
             $user_to_msg = $row_user['user_id'];
             $user_to_name = $row_user['user_name'];
         }
+        $user = $_SESSION['user_email'];
+        $get_user = "SELECT * FROM users WHERE user_email='$user'";
+        $run_user = mysqli_query($con,$get_user);
+        $row = mysqli_fetch_array($run_user);
+
+        $user_from_msg = $row['user_id'];
+        $user_from_name = $row['user_name'];
       ?>
     </div>
     
