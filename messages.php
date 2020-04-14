@@ -76,8 +76,21 @@
                       $user_from = $row_msg['user_from'];
                       $msg_body = $row_msg['message_body'];
                       $msg_date = $row_msg['date'];
-                  }
                 ?>
+                      <div id="loaded_msg">
+                            <p><?php
+                                if($user_to == $user_to_msg AND $user_from == $user_from_msg){
+                                    echo"<div class='message' id='blue' data-toggle = 'tooltip' title = '$msg_date'>$msg_body</div><br><br><br>";
+                                 } 
+                                elseif($user_from == $user_to_msg AND $user_to == $user_from_msg){
+                                    echo"<div class='message' id='green' data-toggle = 'tooltip' title = '$msg_date'>$msg_body</div><br><br><br>";                      
+                                } 
+                              ?>
+                            </p>
+                      </div>
+                        <?php
+                    }
+                        ?>
             </div>
       </div>
     </div>
