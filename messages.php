@@ -92,8 +92,22 @@
                     }
                         ?>
             </div>
+            <?php
+                if(isset($_GET['u_id'])){
+                    $u_id = $_GET['u_id'];
+                    if($u_id == 'new'){
+                        echo "
+                            <form>
+                                <center><h3>Select Someone to start conversation</h3></center>
+                                <textarea disabled class='form-control' placeholder='Enter Your Message'></textarea>
+                                <input type='submit' class='btn btn-default' disabled value='Send'>
+                            </form><br><br>
+                        
+                        ";
+                    }
+                }
+            ?>
       </div>
-    </div>
-    
+    </div> 
 </body>
 </html>
