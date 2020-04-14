@@ -17,6 +17,17 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style/home_style2.css">
 </head>
+<style>
+    #own_posts{
+        border:5px solid #e6e6e6;
+        padding: 40px 50px;
+        width:90%;
+    }
+    #posts-img{
+        height:300px;
+        width:100%;
+    }
+</style>
 <body>
     <div class="row">
         <?php
@@ -195,13 +206,12 @@
                                         </div>
                                     </div>
                                     <div class='row'>
-                                        <div class='col-sm-2'>
-                                        </div>
-                                        <div class='col-sm-6'>
+                                        <div class='col-sm-12'>
                                             <h3><p>$content</p></h3>
                                         </div>
-                                        <div class='col-sm-4'></div>
-                                </div><br><br><br>
+                                    </div><br>
+                                    <a href='single.php?post_id=$post_id' style='float:right';><button class='btn btn-info'>Comment</button></a><br>
+                                </div><br><br>
                             
                             ";
                         }
