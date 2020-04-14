@@ -78,7 +78,7 @@
                                         <li class='list-group-item' title='Gender'><strong>$gender</strong></li>
                                         <li class='list-group-item' title='Country'><strong>$country</strong></li>
                                     </ul>
-                                </div>
+                                
                     
                     ";
                     $user = $_SESSION['user_email'];
@@ -98,8 +98,40 @@
                     ";
                 }
             ?>
+            <div class="col-sm-8">
+                <center><h1><strong><?php echo"$f_name $l_name"; ?></strong> Posts</h1></center>
+                <?php
+                    global $con;
+
+                    if(isset($_GET['u_id'])){
+                        $u_id = $_GET['u_id'];
+                    }
+                    $get_posts = "SELECT * FROM posts WHERE user_id='$u_id' ORDER BY 1 DESC LIMIT 5";
+                    $run_posts = mysqli_query($con,$get_posts);
+
+                    while($row_posts = mysqli_fetch_array($run_posts)){
+
+                        $post_id = $row_posts['post_id'];
+                        $user_id = $row_posts['user_id'];
+                        $content = $row_posts['post_content'];
+                        $upload_image = $row_posts['upload_image'];
+                        $post_date = $row_posts['post_date'];
+                        
+                        $user = "SELECT * FROM users WHERE user_id = '$user_id' AND posts = 'yes'";
+
+                        $run_user = mysqli_query($con,$user);
+                        $row_user = mysqli_fetch_array($run_user);
+
+                        $user_name = $row_user['user_name'];
+                        $f_name = $row_user['f_name'];
+                        $l_name = $row_user['l_name'];
+                        $user_image = $row_user['user_image'];
+                    }
+                ?>
+            </div>
+            </div>
         </div>
     </div>
-            <?php } ?>
+    <?php } ?>
 </body>
 </html>
