@@ -223,5 +223,9 @@
       
       </div>
     </div> 
+    <script>
+        var div = document.getElementById("scroll_messages");
+        div.scrollTop = div.scrollHeight; 
+    </script>
 </body>
 </html>
