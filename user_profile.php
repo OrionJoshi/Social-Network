@@ -136,8 +136,15 @@
                                         </div>
                                         <div col-sm-6>
                                             <h3><a style='text-decoration:none; cursor:pointer; color:#3897f0;' href='user_profile.php?u_id=$user_id'>$user_name</a></h3>
+                                            <h4><small style='color:black;'>Updated a Post on <strong>$post_date</strong></small></h4>
                                         </div>
+                                        <div class='col-sm-4'></div>
                                     </div>
+                                    <div class='row'>
+                                        <div class='col-sm-12'>
+                                            <img id='posts-img' src='imagepost/$upload_image' style='height:350px'>
+                                        </div>
+                                    </div><br>
                                 </div>
                             
                             ";
