@@ -53,7 +53,11 @@
                     $user_image = $row_user['user_image'];
 
                     echo"
-                        
+                        <div class='container-fluid'>
+                            <a style='text-decoration:none; cursor:pointer; color:#3897f0;' href='messages.php?u_id=$user_id'>
+                            <img class='img-circle' src='$user_image' width='90px' height='80px' title='$user_name'><strong>&nbsp $first_name $last_name</strong><br><br>
+                            </a>
+                        </div>
                     
                     ";
                 }
