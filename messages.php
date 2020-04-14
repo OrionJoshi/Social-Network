@@ -53,13 +53,32 @@
                     $user_image = $row_user['user_image'];
 
                     echo"
-                        
+                        <div class='container-fluid'>
+                            <a style='text-decoration:none; cursor:pointer; color:#3897f0;' href='messages.php?u_id=$user_id'>
+                            <img class='img-circle' src='$user_image' width='90px' height='80px' title='$user_name'><strong>&nbsp $first_name $last_name</strong><br><br>
+                            </a>
+                        </div>
                     
                     ";
                 }
 
 
             ?>
+      </div>
+      <div class="col-sm-6">
+            <div class="load_msg" id="scroll_messages">
+                <?php
+                  $sel_msg = "SELECT * FROM user_messages WHERE (user_to = '$user_to_msg' AND user_from = '$user_from_msg') OR (user_from = '$user_to_msg' AND user_to = '$user_from_msg') ORDER BY 1 ASC";
+                  $run_msg = mysqli_query($con,$sel_msg);
+
+                  while($row_msg = mysqli_fetch_array($run_msg)){
+                      $user_to = $row_msg['user_to'];
+                      $user_from = $row_msg['user_from'];
+                      $msg_body = $row_msg['message_body'];
+                      $msg_date = $row_msg['date'];
+                  }
+                ?>
+            </div>
       </div>
     </div>
     
