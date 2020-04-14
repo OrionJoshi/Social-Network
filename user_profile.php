@@ -145,7 +145,63 @@
                                             <img id='posts-img' src='imagepost/$upload_image' style='height:350px'>
                                         </div>
                                     </div><br>
-                                </div>
+                                    <a href='single.php?post_id=$post_id' style='float:right;'><button class='btn btn-success'>View</button></a>
+                                    <a href='functions/delete_post.php?post_id=$post_id' style='float:right;'><button class='btn btn-danger'>Delete</button></a>
+    
+                                </div><br><br><br>
+                            
+                            ";
+                        }
+                        elseif(strlen($content)>=1 && strlen($upload_image)>=1){
+                            echo"
+                                <div id='own_posts'>
+                                    <div class='row'>
+                                        <div class='col-sm-2'>
+                                            <p><img src='$user_image' class = 'img-circle' width='100px' height='100px'</p>
+                                        </div>
+                                        <div class='col-sm-6'>
+                                            <h3><a style='text-decoration:none; cursor:pointer;color:#3897f0;' href='user_profile.php?u_id=$user_id'>$user_name</a></h3>
+                                            <h4><small style='color:black;'>Updated a post on <strong>$post_date</strong></small></h4>
+                                        </div>
+                                        <div class='col-sm-4'>
+                                        </div>
+                                    </div>
+                                    <div class='row'>
+                                        <div class='col-sm-12'>
+                                            <p>$content</p>
+                                            <img id='posts-img' src='imagepost/$upload_image' style='height:350px;'>
+                                        </div>
+                                    </div><br>
+                                    <a href='single.php?post_id=$post_id' style='float:right;'><button class='btn btn-success'>View</button></a>
+                                    <a href='functions/delete_post.php?post_id=$post_id' style='float:right;'><button class='btn btn-danger'>Delete</button></a>
+    
+                                </div><br><br>
+                            
+                            ";
+    
+                        }
+                        else{
+                            echo"
+                                <div id='own_posts'>
+                                    <div class='row'>
+                                        <div class='col-sm-2'>
+                                            <p><img src='$user_image' class = 'img-circle' width='100px' height='100px'</p>
+                                        </div>
+                                        <div class='col-sm-6'>
+                                            <h3><a style='text-decoration:none; cursor:pointer;color:#3897f0;' href='user_profile.php?u_id=$user_id'>$user_name</a></h3>
+                                            <h4><small style='color:black;'>Updated a post on <strong>$post_date</strong></small></h4>
+                                        </div>
+                                        <div class='col-sm-4'>
+                                        </div>
+                                    </div>
+                                    <div class='row'>
+                                        <div class='col-sm-2'>
+                                        </div>
+                                        <div class='col-sm-6'>
+                                            <h3><p>$content</p></h3>
+                                        </div>
+                                        <div class='col-sm-4'></div>
+                                </div><br><br><br>
                             
                             ";
                         }
