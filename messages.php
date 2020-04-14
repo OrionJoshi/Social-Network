@@ -126,12 +126,47 @@
 
                     }else{
                         $insert = "INSERT INTO user_messages(user_to,user_from,message_body,date,message_seen) VALUES('$user_to_msg','$user_from_msg','$msg',Now(),'no')";
-                        
+
                         $run_insert = mysqli_query($con,$insert);
 
                     }
                 }
             ?>
+      </div>
+      <div class="col-sm-3">
+        <?php
+            if(isset($_GET['u_id'])){
+                global $con;
+    
+                $get_id = $_GET['u_id'];
+    
+                $get_user = "SELECT * FROM users WHERE user_id = '$get_id'";
+                $run_user = mysqli_query($con,$get_user);
+                $row = mysqli_fetch_array($run_user);
+
+                $user_id = $row['user_id'];
+                $user_name = $row['user_name'];
+                $f_name =$row['f_name'];
+                $l_name = $row['l_name'];
+                $describe_user = $row['describe_user'];
+                $relationship_status = $row['relationship'];
+                $user_country = $row['user_country'];
+                $gender = $row['user_gender'];
+                $user_image = $row['user_image'];
+                $register_date = $row['user_reg_date'];
+            }
+            if($get_id == "new"){
+
+            }else{
+                echo "
+                    <div class='row'>
+                        
+                    </div>
+                
+                ";
+            }
+        ?>
+      
       </div>
     </div> 
 </body>
