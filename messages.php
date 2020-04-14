@@ -105,6 +105,31 @@
                         
                         ";
                     }
+                    else{
+                        echo"
+                             <form action='' method='post'>
+                                <textarea  class='form-control' placeholder='Enter Your Message' name='msg_box' id='message_textarea'></textarea>
+                                <input type='submit' name='send_msg' id='btn-msg' value='Send'>
+                            </form><br><br>
+                        ";
+                    }
+                }
+            ?>
+            <?php
+                if(isset($_POST['send_msg'])){
+                    $msg = htmlentities($_POST['msg_box']);
+
+                    if($msg == ""){
+                        echo "<h4 style='color:red;text-align:center;'>Message Was Unable to Send</h4>";
+                    }elseif(strlen($msg)>37){
+                        echo "<h4 style='color:red;text-align:center;'>Message is too long! </h4>";
+
+                    }else{
+                        $insert = "INSERT INTO user_messages(user_to,user_from,message_body,date,message_seen) VALUES('$user_to_msg','$user_from_msg','$msg',Now(),'no')";
+                        
+                        $run_insert = mysqli_query($con,$insert);
+
+                    }
                 }
             ?>
       </div>
