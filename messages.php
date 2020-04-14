@@ -65,6 +65,21 @@
 
             ?>
       </div>
+      <div class="col-sm-6">
+            <div class="load_msg" id="scroll_messages">
+                <?php
+                  $sel_msg = "SELECT * FROM user_messages WHERE (user_to = '$user_to_msg' AND user_from = '$user_from_msg') OR (user_from = '$user_to_msg' AND user_to = '$user_from_msg') ORDER BY 1 ASC";
+                  $run_msg = mysqli_query($con,$sel_msg);
+
+                  while($row_msg = mysqli_fetch_array($run_msg)){
+                      $user_to = $row_msg['user_to'];
+                      $user_from = $row_msg['user_from'];
+                      $msg_body = $row_msg['message_body'];
+                      $msg_date = $row_msg['date'];
+                  }
+                ?>
+            </div>
+      </div>
     </div>
     
 </body>
