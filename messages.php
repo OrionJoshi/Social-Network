@@ -160,7 +160,21 @@
             }else{
                 echo "
                     <div class='row'>
-                        
+                        <div class='col-sm-2'>
+                        </div>
+                        <center>
+                            <div style='background-color:#e6e6e6;' class='col-sm-9'>
+                                <h2>Information About</h2>
+                                <img class='img-circle' src='$user_image' width='150' height='150'><br><br>
+                                <ul class='list_group'>
+                                    <li class='list-group-item' title='Username'><strong>$f_name $l_name</strong></li>
+                                    <li class='list-group-item' title='User Status'><strong style='color:grey;'>$describe_user</strong></li>
+                                    <li class='list-group-item' title='relationship_status'><strong>$relationship_status</strong></li>
+                                    <li class='list-group-item' title='Gender'><strong>$gender</strong></li>
+                                    <li class='list-group-item' title='Country'><strong>$user_country</strong></li>
+                                </ul>
+                            </div>
+                            <div class='col-sm-1'></div>
                     </div>
                 
                 ";
