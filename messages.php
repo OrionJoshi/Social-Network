@@ -40,6 +40,27 @@
         $user_from_msg = $row['user_id'];
         $user_from_name = $row['user_name'];
       ?>
+      <div id="select_user" class="col-sm-3">
+            <?php
+                $user = "SELECT * FROM users";
+                $run_user = mysqli_query($con,$user);
+
+                while($row_user = mysqli_fetch_array($run_user)){
+                    $user_id = $row_user['user_id'];
+                    $user_name = $row_user['user_name'];
+                    $first_name = $row_user['f_name'];
+                    $last_name = $row_user['l_name'];
+                    $user_image = $row_user['user_image'];
+
+                    echo"
+                        
+                    
+                    ";
+                }
+
+
+            ?>
+      </div>
     </div>
     
 </body>
