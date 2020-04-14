@@ -27,7 +27,7 @@
 
         if($check == 1){
             echo "<script>alert('Email Already exits,Please try using another email');</script>";
-            echo "<script>window.open('signup.php','_self')</script>";
+            echo "<script>window.open('login.php','_self')</script>";
             exit();
         }
         $rand = rand(1,3);    //Random Number between 1 to 3 generated
