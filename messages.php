@@ -92,8 +92,96 @@
                     }
                         ?>
             </div>
+            <?php
+                if(isset($_GET['u_id'])){
+                    $u_id = $_GET['u_id'];
+                    if($u_id == 'new'){
+                        echo "
+                            <form>
+                                <center><h3>Select Someone to start conversation</h3></center>
+                                <textarea disabled class='form-control' placeholder='Enter Your Message'></textarea>
+                                <input type='submit' class='btn btn-default' disabled value='Send'>
+                            </form><br><br>
+                        
+                        ";
+                    }
+                    else{
+                        echo"
+                             <form action='' method='post'>
+                                <textarea  class='form-control' placeholder='Enter Your Message' name='msg_box' id='message_textarea'></textarea>
+                                <input type='submit' name='send_msg' id='btn-msg' value='Send'>
+                            </form><br><br>
+                        ";
+                    }
+                }
+            ?>
+            <?php
+                if(isset($_POST['send_msg'])){
+                    $msg = htmlentities($_POST['msg_box']);
+
+                    if($msg == ""){
+                        echo "<h4 style='color:red;text-align:center;'>Message Was Unable to Send</h4>";
+                    }elseif(strlen($msg)>37){
+                        echo "<h4 style='color:red;text-align:center;'>Message is too long! </h4>";
+
+                    }else{
+                        $insert = "INSERT INTO user_messages(user_to,user_from,message_body,date,message_seen) VALUES('$user_to_msg','$user_from_msg','$msg',Now(),'no')";
+
+                        $run_insert = mysqli_query($con,$insert);
+
+                    }
+                }
+            ?>
       </div>
-    </div>
+      <div class="col-sm-3">
+        <?php
+            if(isset($_GET['u_id'])){
+                global $con;
     
+                $get_id = $_GET['u_id'];
+    
+                $get_user = "SELECT * FROM users WHERE user_id = '$get_id'";
+                $run_user = mysqli_query($con,$get_user);
+                $row = mysqli_fetch_array($run_user);
+
+                $user_id = $row['user_id'];
+                $user_name = $row['user_name'];
+                $f_name =$row['f_name'];
+                $l_name = $row['l_name'];
+                $describe_user = $row['describe_user'];
+                $relationship_status = $row['relationship'];
+                $user_country = $row['user_country'];
+                $gender = $row['user_gender'];
+                $user_image = $row['user_image'];
+                $register_date = $row['user_reg_date'];
+            }
+            if($get_id == "new"){
+
+            }else{
+                echo "
+                    <div class='row'>
+                        <div class='col-sm-2'>
+                        </div>
+                        <center>
+                            <div style='background-color:#e6e6e6;' class='col-sm-9'>
+                                <h2>Information About</h2>
+                                <img class='img-circle' src='$user_image' width='150' height='150'><br><br>
+                                <ul class='list_group'>
+                                    <li class='list-group-item' title='Username'><strong>$f_name $l_name</strong></li>
+                                    <li class='list-group-item' title='User Status'><strong style='color:grey;'>$describe_user</strong></li>
+                                    <li class='list-group-item' title='relationship_status'><strong>$relationship_status</strong></li>
+                                    <li class='list-group-item' title='Gender'><strong>$gender</strong></li>
+                                    <li class='list-group-item' title='Country'><strong>$user_country</strong></li>
+                                </ul>
+                            </div>
+                            <div class='col-sm-1'></div>
+                    </div>
+                
+                ";
+            }
+        ?>
+      
+      </div>
+    </div> 
 </body>
 </html>
