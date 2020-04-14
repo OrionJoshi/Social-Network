@@ -126,6 +126,29 @@
                         $f_name = $row_user['f_name'];
                         $l_name = $row_user['l_name'];
                         $user_image = $row_user['user_image'];
+
+                        if($content=="NO" && strlen($upload_image)>=1){
+                            echo"
+                                <div id ='own_posts'>
+                                    <div class='row'>
+                                        <div class='col-sm-2'>
+                                            <p><img src='$user_image' class='img-circle' width='100px' height='100px'></p>
+                                        </div>
+                                        <div col-sm-6>
+                                            <h3><a style='text-decoration:none; cursor:pointer; color:#3897f0;' href='user_profile.php?u_id=$user_id'>$user_name</a></h3>
+                                            <h4><small style='color:black;'>Updated a Post on <strong>$post_date</strong></small></h4>
+                                        </div>
+                                        <div class='col-sm-4'></div>
+                                    </div>
+                                    <div class='row'>
+                                        <div class='col-sm-12'>
+                                            <img id='posts-img' src='imagepost/$upload_image' style='height:350px'>
+                                        </div>
+                                    </div><br>
+                                </div>
+                            
+                            ";
+                        }
                     }
                 ?>
             </div>
