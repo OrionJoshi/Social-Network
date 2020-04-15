@@ -373,6 +373,16 @@
         }
 
     }
+    function user_posts(){
+        global $con;
+
+        if(isset($_GET['u_id'])){
+          $u_id = $_GET['u_id'];
+
+        }
+
+
+    }
     function search_user(){
         global $con;
 
