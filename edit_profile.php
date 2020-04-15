@@ -101,7 +101,24 @@
                     <tr>
                         <td style="font-weight:bold;">Forget Password</td>
                         <td>
-                         <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Turn On</button>
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Turn On</button>
+                            <div id="myModal" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Modal Header</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="recovery.php?id=<?php $user_id; ?>" method="post" id="f">
+                                                <strong>What is Your School Best Friend Name ?</strong>
+                                                <textarea class="form-control" name="content" id="" cols="83" rows="4" placeholder="Someone"></textarea><br>
+                                                <input class="btn btn-default" type="submit" name="sub" value="Submit" style="width:100px;"><br><br>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </td>
                     </tr>
                 </table>
