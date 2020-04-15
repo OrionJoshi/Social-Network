@@ -114,6 +114,7 @@
                                                 <strong>What is Your School Best Friend Name ?</strong>
                                                 <textarea class="form-control" name="content" id="" cols="83" rows="4" placeholder="Someone"></textarea><br>
                                                 <input class="btn btn-default" type="submit" name="sub" value="Submit" style="width:100px;"><br><br>
+                                                <pre>Answer the above question we will ask this question if you forget your<br>Password</pre>
                                             </form>
                                         </div>
                                     </div>
