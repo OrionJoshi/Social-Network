@@ -114,16 +114,26 @@
                                                 <strong>What is Your School Best Friend Name ?</strong>
                                                 <textarea class="form-control" name="content" id="" cols="83" rows="4" placeholder="Someone"></textarea><br>
                                                 <input class="btn btn-default" type="submit" name="sub" value="Submit" style="width:100px;"><br><br>
+                                                <pre>Answer the above question we will ask this question if you forget your<br>Password</pre>
                                             </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="Modal">Close</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </td>
                     </tr>
+                    <tr align="center">
+                        <td colspan="6">
+                            <input type="submit" class="btn btn-info" name="update" style="width:250px;" value="Update">
+                        </td>
+                    </tr>
                 </table>
             </form>
        </div>
+       <div class="col-sm-2"></div>
     </div>   
 </body>
 </html>
