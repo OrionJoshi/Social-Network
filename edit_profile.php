@@ -36,7 +36,7 @@
                     <tr>
                         <td style="font-weight:bold;">Change Your lastname</td>
                         <td>
-                            <input class="form-control" type="text" name="f_name" required value="<?php echo $last_name;?>">
+                            <input class="form-control" type="text" name="l_name" required value="<?php echo $last_name;?>">
                         </td>
                     </tr>
                     <tr>
@@ -54,7 +54,7 @@
                     <tr>
                         <td style="font-weight:bold;">Change Your Relationship status</td>
                         <td>
-                            <select class="form-control" name="relationship" id="">
+                            <select class="form-control" name="relationship">
                                 <option><?php echo $relationship_status?></option>
                                 <option>Engaged</option>
                                 <option>Married</option>
@@ -63,7 +63,6 @@
                                 <option>It's Complicated</option>
                                 <option>Separated</option>
                                 <option>Divorced</option>
-
                             </select>
                         </td>
                     </tr>
@@ -81,9 +80,26 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight:bold;">Change Your County</td>
+                        <td style="font-weight:bold;">Change Your Country</td>
                         <td>
-                            <select class="form-control" name="u_gender" id="">
+                            <select name="u_country" class="form-control">
+                                <option><?php echo $user_country; ?></option>
+                                <option>Nepal</option>
+                                <option>Germany</option>
+                                <option>China</option>
+                                <option>Japan</option>
+                                <option>USA</option>
+                                <option>Norway</option>
+                                <option>Finland</option>
+                                <option>India</option>
+                                <option>Pakistan</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight:bold;">Change Your Gender</td>
+                        <td>
+                            <select class="form-control" name="u_gender">
                                 <option><?php echo $user_gender?></option>
                                 <option>Male</option>
                                 <option>Female</option>
@@ -174,8 +190,8 @@
         $u_gender = htmlentities($_POST['u_gender']);
         $u_birthday = htmlentities($_POST['u_birthday']);
 
-        $update = "UPDATE users SET f_name = '$f_name', l_name = '$l_name', user_name = '$user_name',
-        describe_user = '$describe_user', realtionship = '$relationship_status', user_pass = '$user_pass',
+        $update = "UPDATE users SET f_name = '$f_name', l_name = '$l_name', user_name = '$u_name',
+        describe_user = '$describe_user', relationship = '$relationship_status', user_pass = '$u_pass',
         user_email = '$u_email', user_country = '$u_country', user_gender = '$u_gender', user_birthdate ='$u_birthday' WHERE user_id = '$user_id'";
 
          $run = mysqli_query($con,$update);
