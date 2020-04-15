@@ -25,7 +25,7 @@
             <form action="" method="post" enctype="multipart/form-data">
                 <table class="table table-bordered table-hover">
                     <tr align="center">
-                        <td colspan="6" class="active"><h2></h2></td>
+                        <td colspan="6" class="active"><h2>Edit Your Profile</h2></td>
                     </tr>
                     <tr>
                         <td style="font-weight:bold;">Change Your Firstname</td>
@@ -67,11 +67,41 @@
                             </select>
                         </td>
                     </tr>
-                    tr>
+                    <tr>
                         <td style="font-weight:bold;">Change Your Password</td>
                         <td>
                             <input class="form-control" type="password" name="u_pass" id="mypass" required value="<?php echo $user_pass;?>">
                             <input type="checkbox" onclick="Show_password()"><strong>Show Password</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight:bold;">Change Your Email</td>
+                        <td>
+                            <input class="form-control" type="email" name="u_email" required value="<?php echo $user_email;?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight:bold;">Change Your County</td>
+                        <td>
+                            <select class="form-control" name="u_gender" id="">
+                                <option><?php echo $user_gender?></option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Others</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight:bold;">Change Your Birthdate</td>
+                        <td>
+                            <input class="form-control input-md" type="date" name="u_birthday" required value="<?php echo $user_birthday;?>">
+                        </td>
+                    </tr>
+                    <!-- Recovery password option -->
+                    <tr>
+                        <td style="font-weight:bold;">Forget Password</td>
+                        <td>
+                         <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Turn On</button>
                         </td>
                     </tr>
                 </table>
