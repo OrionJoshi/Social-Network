@@ -512,6 +512,33 @@
 
 
     }
+    // results function defination
+    function results(){
+        global $con;
+        if(isset($_GET['search'])){
+            $search_query = htmlentities($_GET['user_query']);
+        }
+        $get_posts = "SELECT * FROM posts WHERE  post_content LIKE '%$search_query%' OR upload_image LIKE '%$search_query%'";
+        $run_posts = mysqli_query($con,$get_posts);
+
+        while($row_posts = mysqli_fetch_array($run_posts)){
+            $post_id = $row_posts['post_id'];
+            $user_id = $row_posts['user_id'];
+            $content = $row_posts['post_content'];
+            $upload_image =$row_posts['upload_image'];
+            $post_date = $row_posts['post_date'];
+
+            $user = "SELECT * FROM users WHERE user_id='$user_id' AND posts='yes'";
+            $run_user = mysqli_query($con,$user);
+            $row_user = mysqli_fetch_array($run_user);
+
+            $user_name = $row_user['user_name'];
+            $first_name = $row_user['f_name'];
+            $last_name = $row_user['l_name'];
+            $user_image = $row_user['user_image'];
+
+        }
+    }
     //Search user function defination
     function search_user(){
         global $con;
