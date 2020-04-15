@@ -132,6 +132,13 @@
                     </tr>
                 </table>
             </form>
+            <?php
+                if(isset($_POST['sub'])){
+                    $bfn = htmlentities($_POST['content']);
+
+                    
+                }
+            ?>
        </div>
        <div class="col-sm-2"></div>
     </div>   
