@@ -174,7 +174,19 @@
         $u_gender = htmlentities($_POST['u_gender']);
         $u_birthday = htmlentities($_POST['u_birthday']);
 
+        $update = "UPDATE users SET f_name = '$f_name', l_name = '$l_name', user_name = '$user_name',
+        describe_user = '$describe_user', realtionship = '$relationship_status', user_pass = '$user_pass',
+        user_email = '$u_email', user_country = '$u_country', user_gender = '$u_gender', user_birthdate ='$u_birthday' WHERE user_id = '$user_id'";
 
+         $run = mysqli_query($con,$update);
+
+        if($run){
+            echo "<script>alert('Updated Successfully!')</script>";   
+            echo "<script> window.open('edit_profile.php?u_id = $user_id','_self')</script>";
+        }else{
+            echo "<script>alert('Error while Updating information!')</script>";
+            echo "<script> window.open('edit_profile.php?u_id = $user_id','_self')</script>";
+        }
     }
 
 ?>
