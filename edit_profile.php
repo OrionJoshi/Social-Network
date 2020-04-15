@@ -117,6 +117,9 @@
                                                 <pre>Answer the above question we will ask this question if you forget your<br>Password</pre>
                                             </form>
                                         </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="Modal">Close</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
