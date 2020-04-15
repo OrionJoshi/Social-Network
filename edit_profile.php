@@ -161,3 +161,20 @@
     </div>   
 </body>
 </html>
+<?php
+    if(isset($_POST['update'])){
+        $f_name = htmlentities($_POST['f_name']);
+        $l_name = htmlentities($_POST['l_name']);
+        $u_name = htmlentities($_POST['u_name']);
+        $describe_user = htmlentities($_POST['describe_user']);
+        $relationship_status = htmlentities($_POST['relationship']);
+        $u_pass = htmlentities($_POST['u_pass']);
+        $u_email = htmlentities($_POST['u_email']);
+        $u_country = htmlentities($_POST['u_country']);
+        $u_gender = htmlentities($_POST['u_gender']);
+        $u_birthday = htmlentities($_POST['u_birthday']);
+
+
+    }
+
+?>
