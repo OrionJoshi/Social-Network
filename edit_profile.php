@@ -138,6 +138,20 @@
                     if($bfn == ""){
                         echo "<script>alert('Please Enter Something!')</script>";
                         echo "<script> window.open('edit_profile.php?u_id = $user_id','_self')</script>";
+                        exit();
+                    }else{
+                        $update = "UPDATE users SET recovery_account = '$bfn' WHERE user_id = '$user_id'";
+
+                        $run = mysqli_query($con,$update);
+
+                        if($run){
+                            echo "<script>alert('Updated Successfully!')</script>";
+                            echo "<script> window.open('edit_profile.php?u_id = $user_id','_self')</script>";
+                        }else{
+                            echo "<script>alert('Error while Updating information!')</script>";
+                            echo "<script> window.open('edit_profile.php?u_id = $user_id','_self')</script>";
+                        
+                        }
                     }
                     
                 }
