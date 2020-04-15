@@ -389,6 +389,16 @@
             $content = $row_posts['post_content'];
             $upload_image =$row_posts['upload_image'];
             $post_date = $row_posts['post_date'];
+
+            $user = "SELECT * FROM users WHERE user_id='$user_id' AND posts='yes'";
+            $run_user = mysqli_query($con,$user);
+            $row_user = mysqli_fetch_array($run_user);
+
+            $user_name = $row_user['user_name'];
+            $user_image = $row_user['user_image'];
+            
+
+
         }
 
 
