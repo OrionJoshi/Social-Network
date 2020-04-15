@@ -125,9 +125,15 @@
                             </div>
                         </td>
                     </tr>
+                    <tr align="center">
+                        <td colspan="6">
+                            <input type="submit" class="btn btn-info" name="update" style="width:250px;" value="Update">
+                        </td>
+                    </tr>
                 </table>
             </form>
        </div>
+       <div class="col-sm-2"></div>
     </div>   
 </body>
 </html>
