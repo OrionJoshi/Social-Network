@@ -31,6 +31,13 @@
                 <div class="header">
                     <h3 style="text-align:center;"><strong>Forget Password</strong></h3><br>
                 </div>
+                <div class="l_pass">
+                    <form action="" method="post">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i clas="glyphicon glyphicon-user"></i></span>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
