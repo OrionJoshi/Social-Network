@@ -76,6 +76,14 @@
 <?php
 
     if(isset($_POST['change'])){
+
+        $user = $_SESSION['user_email'];
+        $get_user ="SELECT * FROM users WHERE user_email = '$user'";
+        $run_user = mysqli_query($con,$get_user);
+        $row = mysqli_fetch_array($run_user);
+
+        $user_id = $row['user_id'];
+
         $pass = htmlentities(mysqli_real_escape_string($con,$_POST['pass']));
         $pass1 = htmlentities(mysqli_real_escape_string($con,$_POST['pass1']));
 
