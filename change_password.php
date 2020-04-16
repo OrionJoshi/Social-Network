@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<?php
+    session_start();
+    include("includes/connection.php");
+
+    if(!isset($_SESSION['user_email'])){
+        header("location:index.php");
+    }
+?>
 <html lang="en">
 <head>
     <title>Forget Password</title>
@@ -71,5 +79,25 @@
         $pass = htmlentities(mysqli_real_escape_string($con,$_POST['pass']));
         $pass1 = htmlentities(mysqli_real_escape_string($con,$_POST['pass1']));
 
+        if($pass == $pass1){
+            if(strlen($pass1)>=6 && strlen($pass1)<= 60){
+                $update = "UPDATE users SET user_pass = '$pass' WHERE user_id = '$user_id'";
+
+                if($run = mysqli_query($con,$update)){
+                    echo "<script>alert('Your Password Changed!')</script>";
+                    echo "<script>window.open('login.php','_self')</script>";
+                }else{
+                    echo "<script>alert('Something Went Wrong!')</script>";
+                    echo "<script>window.open('change_password.php','_self')</script>";
+                }
+            }
+            else{
+                echo "<script>alert('Your Password Should be greater then 6 words!')</script>";
+                echo "<script>window.open('change_password.php','_self')</script>";
+            }
+        }else{
+            echo "<script>alert('Both Password Should Be Matched')</script>";
+            echo "<script>window.open('change_password.php','_self')</script>";
+        }
     }
 ?>
