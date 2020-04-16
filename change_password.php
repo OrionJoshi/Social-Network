@@ -65,3 +65,11 @@
     </div>
 </body>
 </html>
+<?php
+
+    if(isset($_POST['change'])){
+        $pass = htmlentities(mysqli_real_escape_string($con,$_POST['pass']));
+        $pass1 = htmlentities(mysqli_real_escape_string($con,$_POST['pass1']));
+
+    }
+?>
