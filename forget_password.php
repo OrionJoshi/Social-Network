@@ -44,6 +44,7 @@
                             <input type="text" class="form-control" placeholder="Someone" name="recovery_account" required>
                         </div><br>
                         <a style="text-decoration:none; float:right;color=#187FAB;" data-toggle="tooltip" title="Signin" href="signin.php">Back To Signin ?</a>
+                        <center><button id="signup" class="btn btn-info btn-lg" name="submit">Submit</button></center>
                     </form>
                 </div>
             </div>
