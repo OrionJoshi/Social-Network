@@ -39,7 +39,11 @@
                         </div><br>
                         <hr>
                         <pre class="text">Enter Your Best Friend Name </pre>
-                        
+                        <div class="input-group">
+                            <span class="input-group-addon"><i clas="glyphicon glyphicon-pencil"></i></span>
+                            <input type="text" class="form-control" placeholder="Someone" name="recovery_account" required>
+                        </div><br>
+                        <a style="text-decoration:none; float:right;color=#187FAB;" data-toggle="tooltip" title="Signin" href="signin.php">Back To Signin ?</a>
                     </form>
                 </div>
             </div>
