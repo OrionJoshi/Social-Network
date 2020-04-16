@@ -35,7 +35,11 @@
                     <form action="" method="post">
                         <div class="input-group">
                             <span class="input-group-addon"><i clas="glyphicon glyphicon-user"></i></span>
-                        </div>
+                            <input type="email" name="email" placeholder="Enter Your Email" required>
+                        </div><br>
+                        <hr>
+                        <pre class="text">Enter Your Best Friend Name </pre>
+                        
                     </form>
                 </div>
             </div>
